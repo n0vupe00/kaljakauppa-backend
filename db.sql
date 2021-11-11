@@ -22,7 +22,7 @@ create table product (
 	info varchar(255),
 	category_id int not null,
 	index category_id(category_id),
-	foreign key (category_id) referemces category(id) on delete restrict
+	foreign key (category_id) references category(id) on delete restrict
 );
 
 insert into product (name, price, alcohol, size, image, info, category_id) values  ('Koff', 2, 4.7, 0.33, "jpeg", 'Hyvä ja halpa', 1);
