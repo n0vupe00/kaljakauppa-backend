@@ -10,7 +10,7 @@ $category_id = $parameters[1];
 
 try {
     $db = openDb();
-    selectAsJson($db, "select * from product where category_id = '$category_id'");
+    selectAsJson($db, "select * from product where category_id = $category_id");
 }
 catch (PDOException $pdoex) {
     returnError($pdoex);
